@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.character-list {
+  margin: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  .character-card {
+    //width: 20%;
+    //margin: auto;
+    max-width: 300px;
+    width: 300px;
+    display: inline-block;
+    .ant-card {
+      //background: rgb(0, 238, 255);
+      //border: 3px solid yellow;
+    }
+  }
+}

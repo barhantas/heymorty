@@ -1,0 +1,8 @@
+{
+  "short_name": "App The Schwifty",
+  "name": "App The Schwifty",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
