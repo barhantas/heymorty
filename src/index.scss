@@ -10,19 +10,29 @@ body {
   height: 100%;
 }
 
-.character-list {
-  margin: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  .character-card {
-    //width: 20%;
-    //margin: auto;
-    max-width: 300px;
-    width: 300px;
-    display: inline-block;
-    .ant-card {
-      //background: rgb(0, 238, 255);
-      //border: 3px solid yellow;
-    }
+.infinite-scroll {
+}
+
+.home-page {
+}
+
+.character-detail-page {
+  .go-home {
+    position: absolute;
+    left: 5%;
+    top: 12%;
+    background: transparent;
+    color: white;
+    padding: 14px;
+    font-size: 30px;
+    font-weight: bolder;
+    z-index: 666;
   }
+  .go-home:hover,
+  .go-home:focus {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 20px #15e642;
+  }
+  //display: flex;
+  //flex-wrap: wrap;
 }

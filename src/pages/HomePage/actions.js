@@ -1,7 +1,7 @@
 import actionTypes from './action-types';
 
-export const loadCharacters = () => {
-  return { type: actionTypes.LOAD_CHARACTERS };
+export const loadCharacters = (apiInfo) => {
+  return { type: actionTypes.LOAD_CHARACTERS, apiInfo };
 };
 
 export const charactersLoaded = (characters, apiInfo) => {

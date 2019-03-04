@@ -1,4 +1,13 @@
-import CharacterCard from './CharacterCard';
-import CharacterList from './CharacterList';
+import CharacterList from './CharacterList/CharacterList';
+import CharacterCard from './CharacterCard/CharacterCard';
+import Loading from './Loading/Loading';
+import CharacterDetailCard from './CharacterDetailCard/CharacterDetailCard';
+import CharacterEpisodeList from './CharacterEpisodeList/CharacterEpisodeList';
 
-export { CharacterCard, CharacterList };
+export {
+  CharacterCard,
+  CharacterList,
+  Loading,
+  CharacterDetailCard,
+  CharacterEpisodeList,
+};

@@ -1,0 +1,18 @@
+.character-episode-list {
+  background: white;
+  width: 60%;
+  min-width: 800px;
+  margin: 40px auto;
+  .episode-list-header {
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+  }
+  .ant-list-item:hover,
+  .ant-list-item:focus {
+    cursor: pointer;
+    border-left: 30px solid #920000;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
+}

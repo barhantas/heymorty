@@ -1,0 +1,29 @@
+.loading {
+  position: fixed;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+  bottom: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100px;
+  width: 100px;
+  z-index: 9999;
+  background: url('../../assets/loading-portal.png') 50% 50% no-repeat;
+  background-size: 100px 100px;
+
+  transform: translateY(-50%);
+  animation: loading-rotate 2s infinite linear;
+}
+
+@keyframes loading-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.loading.center {
+  bottom: 50%;
+}

@@ -19,7 +19,8 @@ class Character extends RestBaseModel {
       },
       resultListField: (response) => response.results,
       paths: {
-        default: 'character',
+        default: 'character/?page={page}',
+        getById: 'character/{id}',
       },
     };
   }

@@ -1,7 +1,7 @@
 import actionTypes from './action-types';
 
 const initialState = {
-  apiInfo: undefined,
+  apiInfo: {},
   characters: [],
   charactersLoading: false,
 };
@@ -11,11 +11,10 @@ export default (state = initialState, action) => {
     case actionTypes.LOAD_CHARACTERS:
       return { ...state, charactersLoading: true };
     case actionTypes.CHARACTERS_LOADED:
-      console.log(action);
       return {
         ...state,
         charactersLoading: false,
-        characters: [...action.characters],
+        characters: [...state.characters, ...action.characters],
         apiInfo: { ...action.apiInfo },
       };
     default:

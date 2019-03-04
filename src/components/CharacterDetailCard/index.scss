@@ -1,0 +1,57 @@
+.character-detail-card {
+  background: white;
+  border-radius: 50px 50px 0 0;
+  height: 400px;
+  width: 60%;
+  min-width: 800px;
+  margin: 10px auto;
+
+  .character-detail-image {
+    width: 100%;
+    min-width: 280px;
+    max-width: 400px;
+    width: 400px;
+    border-radius: 50px 0 0 0;
+    margin: auto;
+    //position: relative;
+    //z-index: 999;
+  }
+  .character-image-row {
+    //text-align: center;
+  }
+  .character-information-row {
+    display: flex;
+    flex-wrap: wrap;
+    .info-item {
+      display: inline-block;
+      min-width: 80px;
+      height: 60px;
+      width: 100%;
+      margin: 10px auto;
+      font-size: 20px;
+      font-weight: bolder;
+      color: black;
+      padding: 16px 0 0 100px;
+      span {
+        font-weight: normal;
+        color: #3b3c40;
+      }
+    }
+  }
+  .character-name-row {
+    background: #091338;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 26px;
+    padding-top: 6px;
+    color: white;
+  }
+  .character-status-logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+}

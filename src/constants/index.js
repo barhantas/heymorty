@@ -1,1 +1,51 @@
-export const ENDPOINT_URL = 'https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/';
+import aliveLogo from '../assets/alive-logo.png';
+import deadLogo from '../assets/dead-logo.png';
+import unknownLogo from '../assets/unknown-logo.png';
+
+export const ENDPOINT_URL =
+  'https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/';
+
+export const CHARACTER_STATUS = {
+  Alive: {
+    logo: aliveLogo,
+    text: 'Alive',
+  },
+  Dead: { logo: deadLogo, text: 'DEAD' },
+  unknown: { logo: unknownLogo, text: 'UNKNOWN' },
+};
+
+export const NETFLIX_WATCH_URL = 'https://www.netflix.com/watch/';
+
+export const NETFLIX_RICK_AND_MORTY_EPISODES = {
+  S01E01: NETFLIX_WATCH_URL + '80098733',
+  S01E02: NETFLIX_WATCH_URL + '80098734',
+  S01E03: NETFLIX_WATCH_URL + '80098735',
+  S01E04: NETFLIX_WATCH_URL + '80098736',
+  S01E05: NETFLIX_WATCH_URL + '80098737',
+  S01E06: NETFLIX_WATCH_URL + '80098738',
+  S01E07: NETFLIX_WATCH_URL + '80098739',
+  S01E08: NETFLIX_WATCH_URL + '80098740',
+  S01E09: NETFLIX_WATCH_URL + '80098741',
+  S01E10: NETFLIX_WATCH_URL + '80098742',
+  S01E11: NETFLIX_WATCH_URL + '80098743',
+  S02E01: NETFLIX_WATCH_URL + '80107403',
+  S02E02: NETFLIX_WATCH_URL + '80107404',
+  S02E03: NETFLIX_WATCH_URL + '80107405',
+  S02E04: NETFLIX_WATCH_URL + '80107406',
+  S02E05: NETFLIX_WATCH_URL + '80107407',
+  S02E06: NETFLIX_WATCH_URL + '80107408',
+  S02E07: NETFLIX_WATCH_URL + '80107409',
+  S02E08: NETFLIX_WATCH_URL + '80107410',
+  S02E09: NETFLIX_WATCH_URL + '80107411',
+  S02E10: NETFLIX_WATCH_URL + '80107412',
+  S03E01: NETFLIX_WATCH_URL + '80202665',
+  S03E02: NETFLIX_WATCH_URL + '80202666',
+  S03E03: NETFLIX_WATCH_URL + '80202667',
+  S03E04: NETFLIX_WATCH_URL + '80202668',
+  S03E05: NETFLIX_WATCH_URL + '80202669',
+  S03E06: NETFLIX_WATCH_URL + '80202670',
+  S03E07: NETFLIX_WATCH_URL + '80202671',
+  S03E08: NETFLIX_WATCH_URL + '80202672',
+  S03E09: NETFLIX_WATCH_URL + '80202673',
+  S03E10: NETFLIX_WATCH_URL + '80202674',
+};

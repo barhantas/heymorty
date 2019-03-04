@@ -4,20 +4,17 @@ import { message } from 'antd';
 import { charactersLoaded } from './actions';
 import actionTypes from './action-types';
 import { Character } from '../../models';
-//import store from './store';
+import store from '../../store';
 
 export function* loadCharacters(action) {
-  const res = yield call(() =>
-    Character.get()
-      .then((response) => response)
-      .catch((err) => {
-        console.error(err.response);
-        message.error(err.response.message);
-      })
+  const { next } = action.apiInfo;
+  const actualApiInfo = store.getState().homePageReducer.apiInfo;
+  const response = yield call(
+    fetch,
+    next || 'https://rickandmortyapi.com/api/character/'
   );
-  console.log(res);
-  yield put(charactersLoaded(res.response.results, res.response.info));
-  //yield put(charactersLoaded(res && res.response));
+  const data = yield call([response, response.json]);
+  yield put(charactersLoaded(data.results, data.info));
 }
 
 export default function* createSprintSaga() {

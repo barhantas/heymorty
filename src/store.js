@@ -2,8 +2,10 @@ import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import homeService from './pages/HomePage/service';
+import characterDetailPageService from './pages/CharacterDetailPage/service';
 
 import homePageReducer from './pages/HomePage/reducer';
+import characterDetailPageReducer from './pages/CharacterDetailPage/reducer';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -17,6 +19,7 @@ const composeEnhancers =
 
 const combinedReducer = combineReducers({
   homePageReducer,
+  characterDetailPageReducer,
 });
 
 const appReducer = (state, action) => {
@@ -28,7 +31,7 @@ const appReducer = (state, action) => {
 
 const store = createStore(appReducer, composeEnhancers(...enhancers));
 
-const combinedServices = [homeService];
+const combinedServices = [homeService, characterDetailPageService];
 
 combinedServices.forEach((service) => sagaMiddleware.run(service));
 

@@ -1,0 +1,25 @@
+.character-card {
+  display: inline-block;
+  min-width: 280px;
+  width: 20%;
+  margin: 10px auto;
+  .ant-card {
+    text-align: center;
+    margin: 20px;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+    .ant-card-body {
+    }
+    .ant-card-cover {
+      img {
+        border-radius: 1em 1em 0 0;
+      }
+    }
+  }
+  .ant-card:hover,
+  .ant-card:focus {
+    transform: scale(1.05);
+    border-width: 2px;
+    border-color: #00ff5af5;
+  }
+}

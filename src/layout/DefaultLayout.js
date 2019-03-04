@@ -7,7 +7,6 @@ import { ROUTES } from './../routes';
 import DefaultFooter from './components/DefaultFooter';
 import DefaultContent from './components/DefaultContent';
 import DefaultHeader from './components/DefaultHeader';
-import DefaultSider from './components/DefaultSider';
 import NotFoundPage from '../pages/NotFoundPage';
 
 class DefaultLayout extends React.Component {
@@ -25,7 +24,6 @@ class DefaultLayout extends React.Component {
                   <React.Fragment>
                     {!route.disableHeader && <DefaultHeader />}
                     <Layout>
-                      {!route.disableSider && <DefaultSider {...props} />}
                       <DefaultContent
                         content={route.component}
                         disableContentHeader={route.disableContentHeader}
