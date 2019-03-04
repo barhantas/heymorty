@@ -2,12 +2,9 @@ import { put, call, takeEvery } from 'redux-saga/effects';
 import { safeSaga } from '../../helpers';
 import { charactersLoaded } from './actions';
 import actionTypes from './action-types';
-import store from '../../store';
 
 export function* loadCharacters(action) {
   const { next } = action.apiInfo;
-  const actualApiInfo = store.getState().homePageReducer.apiInfo;
-  console.log(actualApiInfo);
   const response = yield call(
     fetch,
     next || 'https://rickandmortyapi.com/api/character/'

@@ -8,7 +8,7 @@ import { CharacterList, Loading } from '../../components';
 class HomePage extends React.Component {
   componentDidMount() {
     const { apiInfo } = this.props;
-    this.props.loadCharacters(apiInfo);
+    !apiInfo.next && this.props.loadCharacters(apiInfo);
   }
 
   render() {
