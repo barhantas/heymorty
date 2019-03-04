@@ -10,12 +10,6 @@ body {
   height: 100%;
 }
 
-.infinite-scroll {
-}
-
-.home-page {
-}
-
 .character-detail-page {
   .go-home {
     position: absolute;
@@ -33,6 +27,4 @@ body {
     transform: scale(1.1);
     text-shadow: 2px 2px 20px #15e642;
   }
-  //display: flex;
-  //flex-wrap: wrap;
 }

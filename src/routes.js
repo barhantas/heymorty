@@ -9,7 +9,6 @@ export const ROUTES = [
     component: HomePage,
     disableHeader: false,
     disableFooter: true,
-    disableContentHeader: true,
   },
   {
     icon: 'user',
@@ -18,6 +17,5 @@ export const ROUTES = [
     component: CharacterDetailPage,
     disableHeader: false,
     disableFooter: true,
-    disableContentHeader: true,
   },
 ];

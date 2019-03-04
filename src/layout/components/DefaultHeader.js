@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Layout, Icon } from 'antd';
+import { Layout } from 'antd';
+import headerLogo from '../../assets/header-logo.png';
 
 const { Header } = Layout;
 
@@ -19,16 +20,8 @@ class DefaultHeader extends React.Component {
 
   render() {
     return (
-      <Header
-        className="header"
-        style={{
-          color: 'white',
-          fontSize: 32,
-        }}>
-        <Icon
-          type="thunderbolt"
-          style={{ fontSize: '32px', paddingRight: 5 }}
-        />
+      <Header className="header">
+        <img className="header-logo" alt="header-logo" src={headerLogo} />
         The Schwiftiest App !
       </Header>
     );

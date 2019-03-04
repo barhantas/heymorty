@@ -22,7 +22,7 @@ class HomePage extends React.Component {
       <div className="home-page">
         <InfiniteScroll
           className="infinite-scroll"
-          dataLength={characters.length} //This is important field to render the next data
+          dataLength={characters.length}
           next={() => {
             loadCharacters(apiInfo);
           }}

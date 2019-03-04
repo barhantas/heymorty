@@ -26,7 +26,6 @@ class DefaultLayout extends React.Component {
                     <Layout>
                       <DefaultContent
                         content={route.component}
-                        disableContentHeader={route.disableContentHeader}
                         contentName={route.name}
                         {...props}
                       />
