@@ -27,6 +27,7 @@
       color: black;
       padding: 16px 0 0 100px;
       span {
+        margin: 6px;
         font-weight: normal;
         color: #3b3c40;
       }
@@ -44,8 +45,7 @@
     color: white;
   }
   .character-status-logo {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
+    height: 20px;
+    margin: 10px;
   }
 }

@@ -25,12 +25,12 @@ class CharacterDetailCard extends React.Component {
               <div className="info-item">
                 Status:
                 <span>
+                  {character.status}
                   <img
                     className="character-status-logo"
                     alt="character-status"
                     src={CHARACTER_STATUS[character.status].logo}
                   />
-                  {character.status}
                 </span>
               </div>
               <div className="info-item">
