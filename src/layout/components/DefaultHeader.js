@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Layout } from 'antd';
 import headerLogo from '../../assets/header-logo.png';
 
@@ -30,11 +29,4 @@ class DefaultHeader extends React.Component {
 
 DefaultHeader.propTypes = {};
 
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DefaultHeader);
+export default DefaultHeader;

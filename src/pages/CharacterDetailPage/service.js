@@ -1,5 +1,4 @@
-import { put, call, takeEvery } from 'redux-saga/effects';
-import { safeSaga } from '../../helpers';
+import { put, call, takeEvery, all } from 'redux-saga/effects';
 import { message } from 'antd';
 import { characterLoaded, episodesLoaded } from './actions';
 import actionTypes from './action-types';
@@ -10,24 +9,24 @@ export function* loadCharacter(action) {
     Character.get({
       path: 'getById',
       pathData: { id: action.id },
+    }).catch((err) => {
+      console.error(err.response);
+      message.error(err.response.message);
     })
-      .then((response) => response)
-      .catch((err) => {
-        console.error(err.response);
-        message.error(err.response.message);
-      })
   );
   yield put(characterLoaded(res.response));
 }
 
 export function* loadEpisodes(action) {
   const { character } = action;
-  const responseArray = yield character.episode.map((url) => call(fetch, url));
-  const response = yield responseArray.map((promise) => promise.json());
+  const responseArray = yield all(
+    character.episode.map((url) => call(fetch, url))
+  );
+  const response = yield all(responseArray.map((promise) => promise.json()));
   yield put(episodesLoaded(response));
 }
 
 export default function* createSprintSaga() {
-  yield takeEvery(actionTypes.LOAD_CHARACTER, safeSaga(loadCharacter));
-  yield takeEvery(actionTypes.CHARACTER_LOADED, safeSaga(loadEpisodes));
+  yield takeEvery(actionTypes.LOAD_CHARACTER, loadCharacter);
+  yield takeEvery(actionTypes.CHARACTER_LOADED, loadEpisodes);
 }

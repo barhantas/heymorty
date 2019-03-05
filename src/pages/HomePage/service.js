@@ -1,5 +1,4 @@
 import { put, call, takeEvery } from 'redux-saga/effects';
-import { safeSaga } from '../../helpers';
 import { charactersLoaded } from './actions';
 import actionTypes from './action-types';
 
@@ -14,5 +13,5 @@ export function* loadCharacters(action) {
 }
 
 export default function* createSprintSaga() {
-  yield takeEvery(actionTypes.LOAD_CHARACTERS, safeSaga(loadCharacters));
+  yield takeEvery(actionTypes.LOAD_CHARACTERS, loadCharacters);
 }

@@ -4,14 +4,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'antd';
 import { CHARACTER_STATUS } from '../../constants';
+import { InfoItem } from '../../components';
 
 class CharacterDetailCard extends React.Component {
   render() {
     const { character } = this.props;
+    const infoItems = [
+      {
+        name: 'Status',
+        value: character.status,
+        imgUrl: CHARACTER_STATUS[character.status].logo,
+      },
+      { name: 'Species', value: character.species },
+      { name: 'Gender', value: character.gender },
+      { name: 'Origin', value: character.origin.name },
+      { name: 'Location', value: character.location.name },
+    ];
     return (
       <div className="character-detail-card">
         <Row>
-          <Col span={8}>
+          <Col span={12}>
             <Row className="character-image-row">
               <img
                 className="character-detail-image"
@@ -20,31 +32,16 @@ class CharacterDetailCard extends React.Component {
               />
             </Row>
           </Col>
-          <Col span={16}>
+          <Col span={12}>
             <Row className="character-information-row">
-              <div className="info-item">
-                Status:
-                <span>
-                  {character.status}
-                  <img
-                    className="character-status-logo"
-                    alt="character-status"
-                    src={CHARACTER_STATUS[character.status].logo}
-                  />
-                </span>
-              </div>
-              <div className="info-item">
-                Species: <span>{character.species}</span>
-              </div>
-              <div className="info-item">
-                Gender: <span>{character.gender}</span>
-              </div>
-              <div className="info-item">
-                Origin: <span>{character.origin.name}</span>
-              </div>
-              <div className="info-item">
-                Location: <span>{character.location.name}</span>
-              </div>
+              {infoItems.map((item, key) => (
+                <InfoItem
+                  key={key}
+                  label={item.name}
+                  context={item.value}
+                  imgUrl={item.imgUrl}
+                />
+              ))}
             </Row>
           </Col>
         </Row>

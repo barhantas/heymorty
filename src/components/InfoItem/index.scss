@@ -1,0 +1,17 @@
+.info-item {
+  display: inline-block;
+  width: 100%;
+  padding: 2%;
+  font-size: calc(6px + 1vw);
+  font-weight: bolder;
+  color: black;
+  span {
+    margin: 6px;
+    font-weight: normal;
+    color: #3b3c40;
+  }
+  .info-item-logo {
+    height: 2vw;
+    margin: 6px;
+  }
+}

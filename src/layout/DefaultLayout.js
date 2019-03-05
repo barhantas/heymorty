@@ -1,6 +1,5 @@
 import './index.scss';
 import React from 'react';
-import { connect } from 'react-redux';
 import { Layout } from 'antd';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import { ROUTES } from './../routes';
@@ -45,13 +44,4 @@ class DefaultLayout extends React.Component {
 
 DefaultLayout.propTypes = {};
 
-const mapStateToProps = (state) => {
-  return {};
-};
-
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DefaultLayout);
+export default DefaultLayout;

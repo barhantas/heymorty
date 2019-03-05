@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { Layout } from 'antd';
 
 const { Content } = Layout;
@@ -24,13 +23,4 @@ DefaultContent.propTypes = {
   contentName: PropTypes.string,
 };
 
-const mapStateToProps = (state) => {
-  return {};
-};
-
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DefaultContent);
+export default DefaultContent;
