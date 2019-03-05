@@ -14,11 +14,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         characterLoading: true,
-        episodesLoading: true,
       };
     case actionTypes.CHARACTER_LOADED:
       return {
         ...state,
+        episodesLoading: true,
         characterLoading: false,
         character: action.character,
       };
