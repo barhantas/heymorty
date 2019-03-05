@@ -12,6 +12,6 @@ export function* loadCharacters(action) {
   yield put(charactersLoaded(data.results, data.info));
 }
 
-export default function* createSprintSaga() {
+export default function* homePageSaga() {
   yield takeEvery(actionTypes.LOAD_CHARACTERS, loadCharacters);
 }

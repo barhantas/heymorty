@@ -7,7 +7,7 @@ import {
   CharacterEpisodeList,
   Loading,
 } from '../../components';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { Row, Icon } from 'antd';
 
 class CharacterDetailPage extends React.Component {
@@ -18,6 +18,13 @@ class CharacterDetailPage extends React.Component {
     character ? characterLoaded(character) : loadCharacter(characterId);
   }
 
+  renderRedirect = () => {
+    const { characterNotFound } = this.props;
+    if (characterNotFound) {
+      return <Redirect to="/notfound" />;
+    }
+  };
+
   render() {
     const {
       character,
@@ -27,6 +34,7 @@ class CharacterDetailPage extends React.Component {
     } = this.props;
     return (
       <div className="character-detail-page">
+        {this.renderRedirect()}
         {characterLoading ? (
           <Loading center />
         ) : (
@@ -62,6 +70,7 @@ CharacterDetailPage.propTypes = {
   characterLoading: PropTypes.bool,
   episodes: PropTypes.array,
   episodesLoading: PropTypes.bool,
+  characterNotFound: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => {
@@ -71,6 +80,7 @@ const mapStateToProps = (state) => {
     characterLoading: state.characterDetailPageReducer.characterLoading,
     episodes: state.characterDetailPageReducer.episodes,
     episodesLoading: state.characterDetailPageReducer.episodesLoading,
+    characterNotFound: state.characterDetailPageReducer.characterNotFound,
   };
 };
 

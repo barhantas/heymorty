@@ -11,3 +11,7 @@ export const characterLoaded = (character) => {
 export const episodesLoaded = (detailedEpisodes) => {
   return { type: actionTypes.EPISODES_LOADED, detailedEpisodes };
 };
+
+export const characterNotFound = () => {
+  return { type: actionTypes.CHARACTER_NOT_FOUND };
+};
