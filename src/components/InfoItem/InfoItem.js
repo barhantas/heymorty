@@ -27,6 +27,7 @@ class InfoItem extends React.Component {
 InfoItem.propTypes = {
   label: PropTypes.string,
   context: PropTypes.string,
+  imgUrl: PropTypes.string,
 };
 
 export default InfoItem;
