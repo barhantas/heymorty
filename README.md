@@ -8,6 +8,8 @@ A simple example of schwifty app
 
 
 [Live Demo](https://heymorty.herokuapp.com/)
+[Live Demo2](https://nifty-neumann-7b1628.netlify.com/)
+
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=heymorty)
 
