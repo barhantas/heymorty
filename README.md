@@ -5,6 +5,8 @@
 
 A simple example of schwifty app
 
+![](https://media.giphy.com/media/l3PKPl1XWtQU08DgL8/giphy.gif)
+
 
 
 [Live Demo](https://heymorty.herokuapp.com/)
